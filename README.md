@@ -1,3 +1,4 @@
+
 # WebAR‑SDK‑Samples
 
 **Official Web‑AR.Studio SDK Samples**  
@@ -23,11 +24,11 @@ Just clone → run → customize → ship.
 
 ## 🎯 Who Is This For?
 
-- **Web Developers** building immersive sites
-- **Marketing & Creative Agencies** deploying campaign-driven AR
-- **E-commerce Teams** prototyping try-on or product previews
-- **Educators & Students** learning AR through real-world code
-- **Startups & Innovators** pitching new ideas with wow factor
+- **Web Developers** building immersive sites  
+- **Marketing & Creative Agencies** deploying campaign-driven AR  
+- **E-commerce Teams** prototyping try-on or product previews  
+- **Educators & Students** learning AR through real-world code  
+- **Startups & Innovators** pitching new ideas with wow factor  
 
 ---
 
@@ -35,11 +36,11 @@ Just clone → run → customize → ship.
 
 The repo includes hands-on, modular examples for all major tracking modes:
 
-- ✅ AR in 360° environments
-- ✅ Face mesh tracking for filters and accessories
-- ✅ Marker-based image tracking
-- ✅ QR-code anchored AR
-- ✅ WebXR-based real-world surface tracking
+- ✅ AR in 360° environments  
+- ✅ Face mesh tracking for filters and accessories  
+- ✅ Marker-based image tracking  
+- ✅ QR-code anchored AR  
+- ✅ WebXR-based real-world surface tracking  
 
 Each folder is a complete, runnable demo.
 
@@ -98,7 +99,7 @@ Each folder is a complete, runnable demo.
 **Ideal For:**  
 - Product placement previews  
 - AR furniture visualization  
-- Persistent spatial AR
+- Persistent spatial AR  
 
 > ⚠️ Requires WebXR-compatible browsers (e.g. Chrome on Android) + HTTPS.
 
@@ -122,4 +123,20 @@ Each folder is a complete, runnable demo.
 git clone https://github.com/WebAR-Studio/webar-sdk-samples.git
 cd webar-sdk-samples
 # Open an example (HTML file) using your browser or a local server
+```
 
+---
+
+## 💰## 💰 Pricing & Limits
+
+WebAR SDK Samples and all tracking types are available **without any usage limits**—regardless of whether you're using face-tracking, image-tracking, 360°, WebXR, or QR-code modes.
+
+**Paid plans start at $10/month** and include:
+
+- 🔓 Unlimited tracking sessions  
+- 🚀 Full access to all tracking types  
+- 🛠️ SDK updates and support  
+- ☁️ Optional hosting on Web-AR.Studio  
+- 📈 Production-ready infrastructure  
+
+> A free tier with limited usage is available for getting started.
