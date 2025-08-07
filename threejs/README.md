@@ -1,1 +1,0 @@
-# Sample projects using Three.js
