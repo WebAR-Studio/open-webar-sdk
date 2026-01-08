@@ -135,9 +135,12 @@ cd webar-sdk-samples
 
 ## 💰## 💰 Pricing & Limits
 
+- 🎓 Free for educational and non-commercial use. We provide a key on request via support.
+- 💼 Commercial use: $8/month
+
 WebAR SDK Samples and all tracking types are available **without any usage limits**—regardless of whether you're using face-tracking, image-tracking, 360°, WebXR, or QR-code modes.
 
-**Paid plans start at $10/month** and include:
+**Paid plans include:
 
 - 🔓 Unlimited tracking sessions  
 - 🚀 Full access to all tracking types  
@@ -145,5 +148,3 @@ WebAR SDK Samples and all tracking types are available **without any usage limit
 - ☁️ Optional hosting on Web-AR.Studio  
 - 📈 Production-ready infrastructure  
 - ❌ No watermarks, no forced branding, no vendor lock-in
-
-> A free tier with limited usage is available for getting started.
