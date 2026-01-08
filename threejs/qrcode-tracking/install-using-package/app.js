@@ -77,6 +77,7 @@ was
       context: context || undefined,
       antialias: true,
       alpha: true,
+      logarithmicDepthBuffer: true,
     });
 
     // Setting renderer properties and size
@@ -101,6 +102,37 @@ was
       CAMERA_NEAR,
       CAMERA_FAR,
     );
+
+    const applySdkCamera = (data) => {
+      if (data.projectionMatrix && data.projectionMatrix.length === 16) {
+        camera.projectionMatrix.fromArray(data.projectionMatrix);
+        camera.projectionMatrixInverse.copy(camera.projectionMatrix).invert();
+        return;
+      }
+
+      const params = data.cameraParams;
+      if (!params) return;
+
+      const { fx, fy, cx, cy, width, height } = params;
+      if (!(fx > 0 && fy > 0 && width > 0 && height > 0)) return;
+
+      const near = camera.near;
+      const far = camera.far;
+      const left = (-cx * near) / fx;
+      const right = ((width - cx) * near) / fx;
+      const top = (cy * near) / fy;
+      const bottom = (-(height - cy) * near) / fy;
+
+      camera.projectionMatrix.makePerspective(
+        left,
+        right,
+        top,
+        bottom,
+        near,
+        far,
+      );
+      camera.projectionMatrixInverse.copy(camera.projectionMatrix).invert();
+    };
 
     // Adding camera and setting up event listeners
     scene.add(camera);
@@ -156,6 +188,7 @@ was
       was
         .on(EVENT_DETECTED, (detectedData) => {
           for (const data of detectedData) {
+            applySdkCamera(data);
             if (model) {
               model.visible = true;
               model.position.set(
@@ -195,6 +228,7 @@ was
       was
         .on(EVENT_POSE, (poseData) => {
           for (const data of poseData) {
+            applySdkCamera(data);
             if (model) {
               model.position.set(
                 data.positionVector.x,
