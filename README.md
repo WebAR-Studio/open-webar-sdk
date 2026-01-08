@@ -148,3 +148,9 @@ WebAR SDK Samples and all tracking types are available **without any usage limit
 - ☁️ Optional hosting on Web-AR.Studio  
 - 📈 Production-ready infrastructure  
 - ❌ No watermarks, no forced branding, no vendor lock-in
+
+## 📮 Support and API key requests
+For any questions about the library or API keys, contact us here:
+- https://t.me/was_team
+- support@web-ar.studio
+- https://discord.gg/4q5dbAb4GZ
