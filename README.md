@@ -4,6 +4,11 @@
 **Official Web‑AR.Studio SDK Samples**  
 Create powerful browser-based AR experiences in minutes using real, working examples.
 
+- 🧪 Test key to get started (limit: 1000 requests per month per domain):
+  ```
+  dca17806a3135ec541fff4a1109be543f1994bcc96effaf790d7add0fc0dc6ba
+  ```
+
 ---
 
 ## 🚀 Why This Repo Matters
@@ -41,6 +46,7 @@ The repo includes hands-on, modular examples for all major tracking modes:
 - ✅ Marker-based image tracking  
 - ✅ QR-code anchored AR  
 - ✅ WebXR-based real-world surface tracking  
+- ✅ Simultaneous tracking of up to 100 images and QR codes  
 
 Each folder is a complete, runnable demo.
 
