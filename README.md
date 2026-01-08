@@ -1,13 +1,7 @@
 
-# WebAR‑SDK‑Samples
+# ARSY - Open WebAR‑SDK‑Samples
 
-**Official Web‑AR.Studio SDK Samples**  
 Create powerful browser-based AR experiences in minutes using real, working examples.
-
-- 🧪 Test key to get started (limit: 1000 requests per month per domain):
-  ```
-  dca17806a3135ec541fff4a1109be543f1994bcc96effaf790d7add0fc0dc6ba
-  ```
 
 ---
 
