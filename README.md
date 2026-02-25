@@ -1,5 +1,5 @@
 
-# ARSY - Open WebAR‑SDK‑Samples
+# ARSY WebAR
 
 Create powerful browser-based AR experiences in minutes using real, working examples.
 
@@ -125,23 +125,7 @@ cd webar-sdk-samples
 # Open an example (HTML file) using your browser or a local server
 ```
 
----
-
-## 💰## 💰 Pricing & Limits
-
-- 🎓 Free for educational and non-commercial use. We provide a key on request via support.
-- 💼 Commercial use: $8/month
-
 WebAR SDK Samples and all tracking types are available **without any usage limits**—regardless of whether you're using face-tracking, image-tracking, 360°, WebXR, or QR-code modes.
-
-**Paid plans include:
-
-- 🔓 Unlimited tracking sessions  
-- 🚀 Full access to all tracking types  
-- 🛠️ SDK updates and support  
-- ☁️ Optional hosting on Web-AR.Studio  
-- 📈 Production-ready infrastructure  
-- ❌ No watermarks, no forced branding, no vendor lock-in
 
 ## 📮 Support and API key requests
 For any questions about the library or API keys, contact us here:
