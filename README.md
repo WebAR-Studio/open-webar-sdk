@@ -1,134 +1,144 @@
+# Open WebAR SDK
+Lightweight WebAR engine for Image Tracking, Face Tracking, QR Tracking, WebXR and AR 360.
+Works on iOS Safari. Alternative to MindAR.
 
-# ARSY WebAR
+This repository is a monorepo with:
+- Starter templates in [`templates/`](./templates)
+- App initializer CLI in [`packages/create-webar-app/`](./packages/create-webar-app)
+- Optional npm alias package [`webar-sdk`](./packages/webar-sdk)
+- Existing runnable showcase demos in `threejs/*`
 
-Create powerful browser-based AR experiences in minutes using real, working examples.
+## Why This Repo Matters
 
----
+If you are building WebAR, common pain points are predictable:
+- Setup is fragmented across different examples and docs
+- Boilerplate repeats across projects
+- You need a fast proof-of-concept, not weeks of setup
+- Browser delivery matters more than forcing native app installs
+- Teams need demo-ready results quickly for stakeholders
 
-## 🚀 Why This Repo Matters
+This repo solves that with ready-to-run examples and templates for the main WebAR tracking modes supported by WebAR.Studio.
 
-If you're a developer exploring WebAR, you probably struggle with one (or all) of these:
+## Who Is This For?
 
-- 😵 WebAR feels complex, with scattered docs and inconsistent examples
-- 🔄 Repeating boilerplate setup again and again
-- 🧪 You want quick proof-of-concept demos, not a 3-week setup
-- 📱 You're tired of native apps—users won’t install them
-- 💼 You need to **show results fast** to clients, bosses, or stakeholders
+- Web developers building immersive sites
+- Marketing and creative agencies launching campaign AR
+- E-commerce teams prototyping product preview and try-on flows
+- Educators and students learning AR with real projects
+- Startups validating AR product ideas quickly
 
-This repo solves that by providing **ready-to-run, production-grade examples** for every major tracking mode supported by [WebAR.Studio](https://web-ar.studio).
-
-Just clone → run → customize → ship.
-
----
-
-## 🎯 Who Is This For?
-
-- **Web Developers** building immersive sites  
-- **Marketing & Creative Agencies** deploying campaign-driven AR  
-- **E-commerce Teams** prototyping try-on or product previews  
-- **Educators & Students** learning AR through real-world code  
-- **Startups & Innovators** pitching new ideas with wow factor  
-
----
-
-## 📦 What's Inside
-
-The repo includes hands-on, modular examples for all major tracking modes:
-
-- ✅ AR in 360° environments  
-- ✅ Face mesh tracking for filters and accessories  
-- ✅ Marker-based image tracking  
-- ✅ QR-code anchored AR  
-- ✅ WebXR-based real-world surface tracking  
-- ✅ Simultaneous tracking of up to 100 images and QR codes  
-
-Each folder is a complete, runnable demo.
-
----
-
-## 🔍 Tracking Types Breakdown
-
-### 🌀 ar-360-tracking
-
-**Type:** 360° Environment Tracking (Device Orientation)  
-**Use Case:** Immersive panoramic scenes without any marker or plane detection.  
-**Ideal For:**  
-- Virtual tours  
-- Interactive storytelling  
-- Product showcases in skybox
-
----
-
-### 👤 face-tracking
-
-**Type:** Face Mesh Tracking  
-**Use Case:** Overlay AR content on the user’s face using facial landmarks.  
-**Ideal For:**  
-- Face filters  
-- Virtual try-ons (glasses, makeup, accessories)  
-- Interactive selfie effects
-
----
-
-### 🖼️ image-tracking
-
-**Type:** Marker-Based Image Recognition  
-**Use Case:** Attach AR content to printed visuals.  
-**Ideal For:**  
-- Augmented brochures/posters  
-- Business cards  
-- Packaging with hidden AR layers
-
----
-
-### 🔳 qrcode-tracking
-
-**Type:** QR Code Anchored Tracking  
-**Use Case:** Use a QR code as an anchor to place AR content in the scene.  
-**Ideal For:**  
-- Print-to-AR campaigns  
-- Events and installations  
-- Educational material triggers
-
----
-
-### 🌐 webxr-tracking
-
-**Type:** Real-World Surface Tracking via WebXR  
-**Use Case:** Detect horizontal/vertical planes to place digital objects in the physical world.  
-**Ideal For:**  
-- Product placement previews  
-- AR furniture visualization  
-- Persistent spatial AR  
-
-> ⚠️ Requires WebXR-compatible browsers (e.g. Chrome on Android) + HTTPS.
-
----
-
-## 📊 Tracking Modes Comparison
-
-| Tracking Mode      | Markerless | Image/QR Required | Best For                            | Browser Support              |
-|--------------------|------------|-------------------|--------------------------------------|------------------------------|
-| `ar-360-tracking`  | ✅         | ❌                | 360° tours, immersive scenes         | All modern mobile browsers   |
-| `face-tracking`    | ✅         | ❌                | Face filters, try-ons                | Front-camera supported       |
-| `image-tracking`   | ❌         | ✅                | AR on printed materials              | Broad (WebGL/WebRTC capable) |
-| `qrcode-tracking`  | ❌         | ✅                | QR-triggered AR, marketing           | All camera-supported         |
-| `webxr-tracking`   | ✅         | ❌                | Surface tracking, product previews   | WebXR-supported only         |
-
----
-
-## 🛠️ Quick Start
+## Quick Start
 
 ```bash
-git clone https://github.com/WebAR-Studio/webar-sdk-samples.git
-cd webar-sdk-samples
-# Open an example (HTML file) using your browser or a local server
+npx create-webar-app my-ar
 ```
 
-WebAR SDK Samples and all tracking types are available **without any usage limits**—regardless of whether you're using face-tracking, image-tracking, 360°, WebXR, or QR-code modes.
+Mode examples:
 
-## 📮 Support and API key requests
-For any questions about the library or API keys, contact us here:
-- https://t.me/was_team
-- support@web-ar.studio
-- https://discord.gg/4q5dbAb4GZ
+```bash
+npx create-webar-app my-ar --image
+npx create-webar-app my-ar --face
+npx create-webar-app my-ar --qr
+npx create-webar-app my-ar --webxr
+npx create-webar-app my-ar --ar360
+```
+
+For scripting/CI use `--mode image|face|qr|webxr|ar-360`:
+
+```bash
+npx create-webar-app my-ar --mode image
+npx create-webar-app my-ar --mode face
+npx create-webar-app my-ar --mode qr
+npx create-webar-app my-ar --mode webxr
+npx create-webar-app my-ar --mode ar-360
+```
+
+`--template <name>` and `--type <name>` also map to mode.
+
+| Mode | Template folder | Description |
+| --- | --- | --- |
+| image | image-tracking | Track printed images |
+| face | face-tracking | Face filters |
+| qr | qr-tracking | QR detection |
+| webxr | webxr | WebXR AR |
+| ar360 | ar-360 | 360 experiences |
+
+## What's Inside
+
+The repo includes modular examples and templates for:
+- AR 360 environment tracking
+- Face mesh tracking for filters and accessories
+- Marker-based image tracking
+- QR-anchored AR
+- WebXR plane/surface tracking
+- Multi-tracking scenarios (up to 100 images and QR codes)
+
+Each mode has runnable demo code and a template-ready starter path.
+
+## Tracking Types Breakdown
+
+### ar-360
+Type: 360 environment tracking (device orientation)
+Use case: immersive panoramic scenes without marker or plane detection
+Ideal for: virtual tours, storytelling, skybox product showcases
+
+### face
+Type: face mesh tracking
+Use case: overlay content using facial landmarks
+Ideal for: face filters, virtual try-on, selfie effects
+
+### image
+Type: marker-based image recognition
+Use case: attach AR content to printed visuals
+Ideal for: brochures, posters, business cards, packaging
+
+### qr
+Type: QR code anchored tracking
+Use case: use a QR code as an AR anchor
+Ideal for: print-to-AR campaigns, events, education triggers
+
+### webxr
+Type: real-world surface tracking via WebXR
+Use case: detect planes and place digital objects in physical space
+Ideal for: placement previews, AR furniture, spatial experiences
+
+Note: WebXR mode requires compatible browsers and HTTPS.
+
+## Tracking Modes Comparison
+
+| Tracking Mode | Markerless | Image/QR Required | Best For | Browser Support |
+| --- | --- | --- | --- | --- |
+| `ar-360` | Yes | No | 360 tours, immersive scenes | Modern mobile browsers |
+| `face` | Yes | No | Face filters, try-ons | Front camera browsers |
+| `image` | No | Yes | AR on printed materials | WebGL/WebRTC capable browsers |
+| `qr` | No | Yes | QR-triggered AR flows | Camera-capable browsers |
+| `webxr` | Yes | No | Surface tracking, placement previews | WebXR-capable browsers |
+
+## Packages
+
+- Main SDK on npm: https://www.npmjs.com/package/@web-ar-studio/webar-engine-sdk
+- Friendly npm entry: https://www.npmjs.com/package/webar-sdk
+- Templates folder: [`templates/`](./templates)
+- CLI package: [`packages/create-webar-app/`](./packages/create-webar-app)
+
+## MindAR Note
+
+MindAR and Open WebAR SDK both target browser-based AR use cases. This repo emphasizes one-command scaffolding and mode-based templates while keeping plain runnable demos in-repo.
+
+## Local Development
+
+Node.js >= 18 is required.
+
+```bash
+npm install
+npm run smoke:create-webar-app
+```
+
+## Support and API key requests
+
+- Telegram: https://t.me/was_team
+- Email: support@web-ar.studio
+- Discord: https://discord.gg/4q5dbAb4GZ
+
+## Need custom WebAR solution?
+👉 https://web-ar.studio

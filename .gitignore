@@ -1,2 +1,7 @@
 .idea
 .vscode
+node_modules
+.DS_Store
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*

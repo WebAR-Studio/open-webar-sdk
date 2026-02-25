@@ -1,0 +1,36 @@
+{
+  "name": "create-webar-app",
+  "version": "0.1.3",
+  "description": "Scaffold Open WebAR apps by tracking mode.",
+  "type": "module",
+  "bin": {
+    "create-webar-app": "./bin/create-webar-app.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "bin",
+    "index.js",
+    "README.md",
+    "templates",
+    "scripts"
+  ],
+  "scripts": {
+    "smoke": "node scripts/smoke-test.mjs",
+    "prepack": "node scripts/sync-templates.mjs"
+  },
+  "dependencies": {
+    "prompts": "^2.4.2"
+  },
+  "keywords": [
+    "webar",
+    "ar",
+    "create",
+    "starter",
+    "template"
+  ]
+}

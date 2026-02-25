@@ -1,0 +1,26 @@
+{
+  "name": "webar-sdk",
+  "version": "1.0.0",
+  "description": "Open WebAR SDK package entry with a familiar npm name",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "dependencies": {
+    "@web-ar-studio/webar-engine-sdk": "^1.0.20"
+  },
+  "keywords": [
+    "WebAR SDK",
+    "image tracking",
+    "face tracking",
+    "iOS Safari",
+    "MindAR alternative"
+  ]
+}

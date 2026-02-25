@@ -1,0 +1,15 @@
+{
+  "name": "open-webar-sdk-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Open WebAR SDK monorepo with templates, CLI initializer, and npm alias package.",
+  "engines": {
+    "node": ">=18"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "smoke:create-webar-app": "npm run -w create-webar-app smoke"
+  }
+}
