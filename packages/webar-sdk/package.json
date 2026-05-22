@@ -14,7 +14,7 @@
     "README.md"
   ],
   "dependencies": {
-    "@web-ar-studio/webar-engine-sdk": "^1.0.20"
+    "@web-ar-studio/webar-engine-sdk": "^1.0.22"
   },
   "keywords": [
     "WebAR SDK",
